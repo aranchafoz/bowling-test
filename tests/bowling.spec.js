@@ -1,4 +1,4 @@
-var Bowling = require('./src/bowling');
+var Bowling = require('../src/bowling');
 
 describe('Bowling', function () {
   function previousRolls(bowling, rolls) {
@@ -14,23 +14,23 @@ describe('Bowling', function () {
       expect(bowling.score()).toEqual(0);
     });
 
-    xit('should be able to score a game with no strikes or spares', function () {
+    it('should be able to score a game with no strikes or spares', function () {
       var rolls = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6];
       var bowling = new Bowling();
       previousRolls(bowling, rolls);
       expect(bowling.score()).toEqual(90);
     });
 
-    xit('a spare followed by zeros is worth ten points', function () {
+    it('a spare followed by zeros is worth ten points', function () {
       var rolls = [6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       var bowling = new Bowling();
       previousRolls(bowling, rolls);
       expect(bowling.score()).toEqual(10);
     });
 
-    xit('points scored in the roll after a spare are counted twice', function () {
+    it('points scored in the roll after a spare are counted twice', function () {
       var rolls = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      var bowling = new Bowling();
+      var bowling = new Bowling();If 
       previousRolls(bowling, rolls);
       expect(bowling.score()).toEqual(16);
     });
